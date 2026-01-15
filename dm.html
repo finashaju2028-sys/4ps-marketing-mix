@@ -1,303 +1,384 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marketing Mix Analysis: Amal Jyothi College of Engineering</title>
-    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/color/48/000000/university.png">
-    <style>
-        *{
-		margin:0;padding:0;
-		box-sizing:border-box;
-		font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif
-		}
-        body{
-		line-height:1.6;
-		color:#333;background:#f9f9f9;
-		padding-bottom:40px
-		}
-        header{
-		background:linear-gradient(135deg,#1a5f7a 0%,#2a9d8f 100%);
-		color:#fff;padding:20px 0;
-		text-align:center;
-		box-shadow:0 4px 12px rgba(0,0,0,.1)
-		}
-        .college-name{
-		font-size:2.2rem;
-		margin-bottom:10px
-		}
-        .page-title{
-		font-size:1.4rem;
-		font-weight:300;
-		max-width:900px;
-		margin:0 auto
-		}
-        nav{
-		background:#264653;
-		position:sticky;
-		top:0;
-		z-index:100}
-        nav ul{
-		display:flex;
-		justify-content:center;
-		list-style:none;
-		flex-wrap:wrap
-		}
-        nav a{
-		display:block;
-		color:#fff;
-		text-decoration:none;
-		padding:15px 25px;
-		font-weight:500
-		}
-        nav a:hover{
-		background:#2a9d8f
-		}
-        .container{
-		max-width:1200px;
-		margin:auto;
-		padding:0 20px
-		}
-        section{
-		background:#fff;
-		border-radius:8px;
-		padding:30px;
-		margin:30px 0;
-		box-shadow:0 5px 15px rgba(0,0,0,.05);
-		border-left:5px solid #2a9d8f}
-        h2{
-		color:#1a5f7a;
-		margin-bottom:20px;
-		border-bottom:2px solid #f0f0f0;
-		padding-bottom:10px
-		}
-        h3{
-		color:#2a9d8f;
-		margin:25px 0 15px
-		}
-        p{
-		margin-bottom:15px
-		}
-        ul,ol{
-		margin-left:20px;
-		margin-bottom:20px
-		}
-        table{
-		width:100%;
-		border-collapse:collapse;
-		margin:20px 0
-		}
-        th,td{
-		padding:12px 15px;
-		border-bottom:1px solid #ddd
-		}
-        th{
-		background:#1a5f7a;
-		color:#fff
-		}
-        .image-gallery{
-		display:flex;
-		flex-wrap:wrap;
-		gap:15px;
-		justify-content:center
-		}
-        .image-container{
-		flex:1 1 300px;
-		overflow:hidden;
-		border-radius:8px;
-		box-shadow:0 4px 8px rgba(0,0,0,.1)
-		}
-        .image-container img{
-		width:100%;
-		height:200px;
-		object-fit:cover
-		}
-        iframe{
-		max-width:100%;
-		border-radius:8px;
-		box-shadow:0 4px 15px rgba(0,0,0,.1)
-		}
-        .strengths-weaknesses{
-		display:flex;
-		flex-wrap:wrap;
-		gap:30px;
-		margin:25px 0
-		}
-        .strengths,.weaknesses{
-		flex:1 1 300px;
-		padding:20px;
-		border-radius:8px
-		}
-        .strengths{
-		background:#f0f9f5;
-		border-left:5px solid #4CAF50
-		}
-        .weaknesses{
-		background:#fef5f5;
-		border-left:5px solid #f44336}
-        .suggestions-list{
-		background:#f8f9fa;
-		padding:25px;
-		border-radius:8px;
-		margin:25px 0
-		}
-        footer{
-		text-align:center;
-		margin-top:40px;
-		padding-top:20px;
-		border-top:1px solid #ddd;
-		color:#666;
-		font-size:.9rem
-		}
-        @media(max-width:768px){
-		nav ul{flex-direction:column}.college-name{font-size:1.8rem}section{padding:20px}.strengths-weaknesses{flex-direction:column}
-		}
-        #product{
-		border-left-color:#2a9d8f
-		}
-        #price{
-		border-left-color:#e76f51
-		}
-        #place{
-		border-left-color:#e9c46a
-		}
-        #promotion{
-		border-left-color:#f4a261
-		}
-        .intro{
-		text-align:center;
-		padding:40px 20px;
-		background:linear-gradient(135deg,#f8f9fa 0%,#e9ecef 100%);
-		border-radius:8px;
-		margin:30px 0
-		}
-        .intro h1{
-		color:#1a5f7a;
-		margin-bottom:20px
-		}
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marketing Mix Analysis – Amal Jyothi College of Engineering</title>
+
+<link rel="icon" href="https://img.icons8.com/color/48/000000/university.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+:root{
+    --primary:#0f4c75;
+    --secondary:#1b9aaa;
+    --accent:#f4a261;
+    --bg:#f4f6f9;
+    --card:#ffffff;
+    --text:#1f2937;
+    --muted:#6b7280;
+    --border:#e5e7eb;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',Tahoma,Verdana,sans-serif;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.7;
+}
+
+/* HEADER */
+header{
+    background:linear-gradient(120deg,var(--primary),var(--secondary));
+    color:#fff;
+    text-align:center;
+    padding:45px 20px;
+}
+
+header h1{
+    font-size:2.4rem;
+    margin-bottom:10px;
+}
+
+header p{
+    font-size:1.2rem;
+}
+
+/* NAV */
+nav{
+    background:#fff;
+    position:sticky;
+    top:0;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+    z-index:100;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+nav a{
+    padding:15px 22px;
+    text-decoration:none;
+    color:var(--primary);
+    font-weight:600;
+}
+
+nav a:hover{
+    background:var(--primary);
+    color:#fff;
+}
+
+/* GRID */
+.main-grid{
+    max-width:1200px;
+    margin:auto;
+    padding:30px 20px;
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:30px;
+}
+
+/* SECTIONS */
+section{
+    background:var(--card);
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 8px 20px rgba(0,0,0,.06);
+    border-left:6px solid var(--secondary);
+}
+
+/* FULL WIDTH */
+.full-width{
+    grid-column:1 / -1;
+}
+
+/* HEADINGS */
+h2{
+    color:var(--primary);
+    margin-bottom:18px;
+}
+
+h3{
+    color:var(--secondary);
+    margin:18px 0 8px;
+}
+
+ul,ol{
+    margin-left:20px;
+}
+
+p{margin-bottom:12px;}
+
+/* IMAGE GALLERY */
+.image-gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:15px;
+}
+
+.image-gallery img{
+    width:100%;
+    height:auto; /* responsive height */
+    object-fit:cover;
+    border-radius:10px;
+}
+
+/* TABLE */
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:15px 0;
+    display:block;
+    overflow-x:auto; /* scroll on small screens */
+}
+
+th{
+    background:var(--primary);
+    color:#fff;
+}
+
+th,td{
+    padding:12px;
+    border-bottom:1px solid var(--border);
+}
+
+/* SWOT */
+.strengths{
+    background:#e6f7f6;
+    padding:18px;
+    border-radius:10px;
+    margin-bottom:15px;
+}
+
+.weaknesses{
+    background:#fff3e6;
+    padding:18px;
+    border-radius:10px;
+}
+
+/* SOCIAL */
+.social-links a{
+    display:flex;
+    align-items:center;
+    margin-bottom:10px;
+    text-decoration:none;
+    color:var(--text);
+    font-weight:600;
+}
+
+.social-links i{
+    font-size:1.4rem;
+    margin-right:12px;
+    color:var(--primary);
+}
+
+/* CONCLUSION – SMALLER */
+#conclusion{
+    padding:20px 30px;
+}
+
+#conclusion p{
+    max-width:900px;
+    margin:auto;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:25px;
+    border-top:1px solid var(--border);
+    color:var(--muted);
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+    .main-grid{
+        grid-template-columns:1fr;
+        padding:20px;
+    }
+    nav ul{
+        flex-direction:column;
+        align-items:center;
+    }
+    nav a{
+        width:100%;
+        text-align:center;
+        padding:12px 15px;
+    }
+}
+
+/* SMALLER SCREENS */
+@media(max-width:600px){
+    header h1{
+        font-size:1.6rem;
+    }
+    header p{
+        font-size:0.9rem;
+    }
+    section{
+        padding:20px;
+    }
+}
+</style>
 </head>
+
 <body>
+
 <header>
-    <div class="container">
-        <h1 class="college-name">Amal Jyothi College of Engineering</h1>
-        <p class="page-title">Marketing Mix (4Ps) Analysis – Case Study | Kanjirappally, Kottayam, Kerala</p>
-    </div>
+<h1>Amal Jyothi College of Engineering</h1>
 </header>
+
 <nav>
-    <ul>
-        <li><a href="#introduction">Introduction</a></li>
-        <li><a href="#product">Product</a></li>
-        <li><a href="#price">Price</a></li>
-        <li><a href="#place">Place</a></li>
-        <li><a href="#promotion">Promotion</a></li>
-        <li><a href="#analysis">Analysis</a></li>
-        <li><a href="#suggestions">Conclusion</a></li>
-    </ul>
+<ul>
+<li><a href="#intro">Introduction</a></li>
+<li><a href="#about">About AJCE</a></li>
+<li><a href="#product">Product</a></li>
+<li><a href="#price">Price</a></li>
+<li><a href="#place">Place</a></li>
+<li><a href="#promotion">Promotion</a></li>
+<li><a href="#analysis">Analysis</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul>
 </nav>
-<main class="container">
-<section id="introduction" class="intro">
-    <h1>Marketing Mix Analysis of Amal Jyothi College of Engineering</h1>
-    <p>This case study analyzes how Amal Jyothi College of Engineering, located at Kanjirappally in Kottayam district of Kerala, applies the 4Ps of marketing—Product, Price, Place, and Promotion—in the competitive higher education sector. The analysis is based on a student perspective and focuses on academic offerings, campus facilities, accessibility, and promotional strategies.</p>
-    <p>The study is presented as a responsive webpage that integrates marketing concepts with basic web design principles.</p>
+
+<div class="main-grid">
+
+<section id="intro" class="full-width">
+<h2>Introduction</h2>
+<p>This case study analyzes how Amal Jyothi College of Engineering applies the Marketing Mix (4Ps) – Product, Price, Place, and Promotion – in the higher education sector. The analysis is from a student perspective and focuses on academic offerings, campus facilities, accessibility, and promotional strategies.</p>
 </section>
+
+<section id="about">
+<h2>About Amal Jyothi College of Engineering</h2>
+<p>Amal Jyothi College of Engineering (AJCE) was established in <strong>2001</strong> and is located at Kanjirappally in Kottayam district, Kerala. The college is approved by <strong>AICTE</strong> and affiliated with <strong>APJ Abdul Kalam Technological University (KTU)</strong>. Managed by the Catholic Diocese of Kanjirappally, AJCE is a NAAC ‘A’ Grade institution with several NBA-accredited programs.</p>
+<ul>
+<li>Offers undergraduate, postgraduate, and professional courses in engineering, management, and computer applications</li>
+<li>Green campus with modern infrastructure, well-equipped labs, and a central library</li>
+<li>Strong focus on research, innovation, and industry collaboration</li>
+<li>Active placement cell with partnerships with top recruiters</li>
+<li>Cultural, technical, and sports activities for holistic student development</li>
+</ul>
+<p>AJCE aims to provide quality education with ethical values, preparing students to excel in their careers and contribute positively to society.</p>
+</section>
+
 <section id="product">
-    <h2>1. Product: Academic & Non-Academic Offerings</h2>
-    <p>Amal Jyothi College of Engineering offers a balanced combination of academic programs and campus support services that contribute to students’ overall development.</p>
-    <h3>Academic Programs</h3>
-    <ul>
-        <li><strong>B.Tech:</strong> Computer Science & Engineering, Artificial Intelligence & Data Science, Electronics & Communication, Electrical & Electronics, Mechanical, and Civil Engineering</li>
-        <li><strong>M.Tech:</strong> Postgraduate engineering programs under APJ Abdul Kalam Technological University (KTU)</li>
-        <li><strong>BBA:</strong> Undergraduate program focusing on management and business fundamentals</li>
-        <li><strong>BCA & MCA:</strong> Computer applications programs emphasizing software development and IT skills</li>
-    </ul>
-    <h3>Faculty & Infrastructure</h3>
-    <ul>
-        <li>Experienced and qualified faculty members</li>
-        <li>Well-equipped laboratories, smart classrooms, and central library</li>
-        <li>Separate hostels for boys and girls with Wi‑Fi and security</li>
-        <li>Sports, cultural, and technical facilities</li>
-    </ul>
-    <h3>Campus Facilities</h3>
-    <div class="image-gallery">
-        <div class="image-container"><img src="ajce.jpg" alt="AJCE campus building"></div>
-        <div class="image-container"><img src="ajce2.jpg" alt="College laboratory"></div>
-        <div class="image-container"><img src="ajce1.jpg" alt="College library"></div>
-    </div>
-    <p>The college emphasizes value-based education, discipline, innovation, and career readiness, which form its key unique selling points.</p>
+<h2>1. Product – Academic & Support Services</h2>
+<p>Amal Jyothi College of Engineering offers programs like B.Tech, M.Tech, BBA, BCA, and MCA with modern curriculum and experienced faculty. The college provides well-equipped laboratories, a digital library, hostels, and sports facilities to support student learning and development. Various student clubs, workshops, and innovation activities help enhance skills and practical knowledge. Mentorship and career guidance are also provided to prepare students for professional success.</p>
+<div class="image-gallery">
+<img src="ajce.jpg" alt="College Building">
+<img src="ajce1.jpg" alt="Laboratory">
+<img src="ajce2.jpg" alt="Library">
+<img src="ajce3.jpg" alt="Sports Complex">
+</div>
 </section>
+
 <section id="price">
-    <h2>2. Price: Fee Structure & Perceived Value</h2>
-    <p>Amal Jyothi College of Engineering follows a transparent fee structure regulated by government and management quota norms, making education 
-	accessible while maintaining quality.</p>
-    <table>
-        <tr><th>Program</th><th>Approximate Annual Fee</th></tr>
-        <tr><td>B.Tech</td><td>₹75,000 – ₹1,00,000</td></tr>
-        <tr><td>M.Tech</td><td>₹90,000 – ₹1,20,000</td></tr>
-        <tr><td>BBA / BCA</td><td>₹50,000 – ₹70,000</td></tr>
-        <tr><td>MCA</td><td>₹80,000 – ₹1,00,000</td></tr>
-    </table>
-    <ul>
-        <li>Merit-based and need-based scholarships</li>
-        <li>Educational loan assistance</li>
-        <li>Reasonable pricing compared to similar institutions in Kerala</li>
-    </ul>
+<h2>2. Price – Fee Structure</h2>
+<table>
+<tr><th>Program</th><th>Annual Fee</th></tr>
+<tr><td>B.Tech</td><td>₹75,000 – ₹1,00,000</td></tr>
+<tr><td>M.Tech</td><td>₹90,000 – ₹1,20,000</td></tr>
+<tr><td>BBA / BCA</td><td>₹50,000 – ₹70,000</td></tr>
+<tr><td>MCA</td><td>₹80,000 – ₹1,00,000</td></tr>
+</table>
 </section>
+
 <section id="place">
-    <h2>3. Place: Location & Service Delivery</h2>
-    <ul>
-        <li>Located at Kanjirappally, Kottayam district, Kerala</li>
-        <li>Peaceful hill-top campus suitable for focused learning</li>
-        <li>Good road connectivity and college bus facilities</li>
-        <li>Offline teaching supported by digital platforms and LMS</li>
-    </ul>
+<h2>3. Place – Location & Accessibility</h2>
+<ul>
+<li>Located in Kanjirappally, Kottayam district, Kerala, surrounded by serene greenery and hills</li>
+<li>Well-connected by road to major towns and cities like Kottayam (35 km) and Pala (10 km)</li>
+<li>Regular college bus services and nearby public transport facilities</li>
+<li>Peaceful learning environment with low pollution and natural surroundings</li>
+<li>Proximity to research centers, IT parks, and industries for internships and collaborations</li>
+<li>Safe and student-friendly campus with CCTV surveillance and security personnel</li>
+<li>On-campus hostels within walking distance to classrooms and labs</li>
+<li>Accessible healthcare and emergency services nearby</li>
+<li>Ample parking and green campus promoting sustainable practices</li>
+</ul>
 </section>
+
 <section id="promotion">
-    <h2>4. Promotion: Communication & Branding</h2>
-    <ul>
-        <li>Official website and active social media presence</li>
-        <li>School outreach programs and education expos</li>
-        <li>Technical fests, cultural events, and workshops</li>
-        <li>Strong alumni and student word-of-mouth promotion</li>
-    </ul>
-    
+<h2>4. Promotion</h2>
+<ul>
+<li>Website & social media</li>
+<li>Education fairs & outreach</li>
+<li>Fests, workshops & alumni promotion</li>
+<h3>Connect with AJCE</h3>
+<div class="social-links">
+  <a href="https://www.ajce.in" target="_blank"><i class="fas fa-globe"></i> Official Website</a>
+  <a href="https://www.facebook.com/amaljyothicollege" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+  <a href="https://www.instagram.com/ajce.in/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+  <a href="https://www.youtube.com/user/amaljyothivideos" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+</div>
+</ul>
 </section>
+
+
+
+
 <section id="analysis">
-    <h2>5. Analysis & Evaluation</h2>
-    <div class="strengths-weaknesses">
-        <div class="strengths">
-            <h3>Strengths</h3>
-            <ul>
-                <li>Strong academic reputation in Kerala</li>
-                <li>Wide range of programs including engineering, management, and computer applications</li>
-                <li>Good placement support and industry exposure</li>
-                <li>Disciplined and value-based campus culture</li>
-            </ul>
-        </div>
-        <div class="weaknesses">
-            <h3>Weaknesses</h3>
-            <ul>
-                <li>Limited international exposure</li>
-                <li>Rural location may limit urban accessibility</li>
-            </ul>
-        </div>
-    </div>
+<h2>5. Analysis</h2>
+<div class="strengths">
+<h3>Strengths</h3>
+<ul>
+<li>Academic reputation</li>
+<li>Placement support</li>
+<li>Value-based culture</li>
+</ul>
+</div>
+<div class="weaknesses">
+<h3>Weaknesses</h3>
+<ul>
+<li>Limited international exposure</li>
+<li>Rural location</li>
+</ul>
+</div>
 </section>
-<section id="suggestions" class="suggestions-list">
-    <h2>6. Suggestions & Conclusion</h2>
-    <ol>
-        <li>Strengthen digital marketing and global academic collaborations</li>
-        <li>Introduce more interdisciplinary and emerging technology programs</li>
-        <li>Enhance international exposure through exchange programs</li>
-    </ol>
-    <p>In conclusion, Amal Jyothi College of Engineering effectively applies the marketing mix by offering quality education at an affordable 
-	cost, supported by good infrastructure, strong academic culture, and consistent promotion. With continued focus on innovation and global 
-	exposure, the institution can further enhance its competitive position.</p>
+
+<section class="full-width">
+<h2>Additional Information</h2>
+
+<h3>Placements</h3>
+<ul>
+<li>Dedicated placement & training cell</li>
+<li>Top recruiters</li>
+<li>Soft-skill training</li>
+</ul>
+
+<h3>Vision & Mission</h3>
+<p>To be a center of excellence in engineering education with ethical values and global competence.</p>
+
+<h3>Student Life</h3>
+<ul>
+<li>Technical clubs & innovation cells</li>
+<li>Cultural and sports activities</li>
+<li>NSS, IEEE, IEDC</li>
+</ul>
+
 </section>
-</main>
-<footer class="container">
-    <p>Marketing Mix Analysis Case Study – Amal Jyothi College of Engineering</p>
-    <p>Student Assignment | January 2026</p>
+
+<section id="conclusion" class="full-width">
+<h2>6. Conclusion</h2>
+<p>Amal Jyothi College of Engineering effectively implements the marketing mix by offering quality education at a reasonable cost, supported by strong infrastructure and disciplined academic culture.</p>
+</section>
+
+</div>
+
+<footer>
+<p>Marketing Mix Analysis – Amal Jyothi College of Engineering</p>
+<p>January 2026</p>
 </footer>
+
 </body>
 </html>
